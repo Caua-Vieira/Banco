@@ -15,12 +15,4 @@ abstract class Conta(
         }
     }
 
-    fun transfere(valor: Double, destino: Conta) : Boolean{
-        if(valor <= this.saldo){
-            this.saldo -= valor
-            destino.deposita(valor)
-            return true
-        }
-        return false
-    }
 }

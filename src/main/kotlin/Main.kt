@@ -1,8 +1,8 @@
-import testes.testeSistemaInterno
+import testes.testeContas
 
 fun main() {
 
-    testeSistemaInterno()
+    testeContas()
 }
 
 

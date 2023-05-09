@@ -3,7 +3,7 @@ package modelos
 class ContaCorrente(
     titular: String,
     cpf: String
-) : Conta(
+) : ContaTransferivel(
     titular = titular,
     cpf = cpf
 ) {

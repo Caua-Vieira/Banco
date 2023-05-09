@@ -1,6 +1,7 @@
 package testes
 
 import modelos.ContaCorrente
+import modelos.ContaSalario
 
 fun testeContas() {
     val caua = ContaCorrente(titular = "Cauã", cpf = "11111")
@@ -12,5 +13,13 @@ fun testeContas() {
     println("Saldo da fran após transferência: ${fran.saldo}")
 
     caua.saca(100.0)
-    println(caua.saldo)
+    println("saldo de Cauã após saque: ${caua.saldo}")
+
+    val joaoSalario = ContaSalario(titular = "João", cpf = "")
+    joaoSalario.deposita(1000.0)
+    println("\nSaldo de João após deposito na conta salario: ${joaoSalario.saldo}")
+
+    fran.transfere(valor = 300.0, destino = joaoSalario)
+    println("\n saldo de joão após transferencia recebida: ${joaoSalario.saldo}")
+
 }
