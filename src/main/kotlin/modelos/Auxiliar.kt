@@ -11,4 +11,5 @@ class Auxiliar (
 ){
     override val bonificacao: Double = salario * 0.02
 
+
 }

@@ -1,11 +1,11 @@
 package modelos
 
 abstract class ContaTransferivel(
-    titular: String,
-    cpf: String
+    titular: Cliente,
+    numero: Int
 ) : Conta(
     titular = titular,
-    cpf = cpf
+    numero = numero
 ) {
     fun transfere(valor: Double, destino: Conta): Boolean {
         if (valor <= this.saldo) {
@@ -15,4 +15,6 @@ abstract class ContaTransferivel(
         }
         return false
     }
+
+
 }

@@ -1,11 +1,11 @@
 package modelos
 
 class ContaSalario(
-    titular: String,
-    cpf: String
+    titular: Cliente,
+    numero: Int
 ) : Conta(
     titular = titular,
-    cpf = cpf
+    numero = numero
 ) {
     override fun saca(valor: Double) {
         if (valor <= this.saldo) {

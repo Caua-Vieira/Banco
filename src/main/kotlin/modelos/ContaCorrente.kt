@@ -1,11 +1,11 @@
 package modelos
 
 class ContaCorrente(
-    titular: String,
-    cpf: String
+    titular: Cliente,
+    numero: Int
 ) : ContaTransferivel(
     titular = titular,
-    cpf = cpf
+    numero = numero
 ) {
     override fun saca(valor: Double){
         val valorComTaxa = valor + (valor * 0.05)
